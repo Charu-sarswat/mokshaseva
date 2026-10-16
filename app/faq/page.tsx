@@ -12,7 +12,7 @@ const faqs = [
   {
     question: "What is international repatriation?",
     answer:
-      "International repatriation is the process of returning a deceased person's body or ashes to their home country. This involves coordinating with embassies, airlines, and local authorities to ensure all legal and logistical requirements are met.",
+      "International repatriation is the process of returning a deceased person's body or sacred remains for ash immersion to their home country. This involves coordinating with embassies, airlines, and local authorities to ensure all legal and logistical requirements are met.",
   },
   {
     question: "How long does the repatriation process take?",
@@ -55,7 +55,7 @@ export default function FAQPage() {
                 Help Center
               </span>
 
-              <h1 className="mt-2 max-w-3xl font-serif text-3xl font-md leading-[1.1] tracking-tight text-[#17202A] sm:text-4xl md:text-5xl">
+              <h1 className="mt-2 max-w-3xl font-sans text-3xl font-md leading-[1.1] tracking-tight text-[#17202A] sm:text-4xl md:text-5xl">
                 Answers for families who need clear guidance.
               </h1>
 
@@ -98,7 +98,7 @@ export default function FAQPage() {
               <span className="text-[11px] font-md uppercase tracking-[0.16em] text-[#C77B21]">
                 Common Questions
               </span>
-              <h2 className="mt-1.5 font-serif text-2xl font-md text-[#17202A]">
+              <h2 className="mt-1.5 font-sans text-2xl font-md text-[#17202A]">
                 Frequently asked questions
               </h2>
             </div>
@@ -110,7 +110,7 @@ export default function FAQPage() {
                   value={`item-${index}`}
                   className="rounded-xl border border-[#E8DED2] bg-[#FAF8F4] px-4 shadow-none transition-all data-[state=open]:bg-white data-[state=open]:shadow-sm"
                 >
-                  <AccordionTrigger className="py-3.5 text-left font-serif text-[15px] font-md leading-snug text-[#17202A] hover:text-[#C77B21] hover:no-underline">
+                  <AccordionTrigger className="py-3.5 text-left font-sans text-[15px] font-md leading-snug text-[#17202A] hover:text-[#C77B21] hover:no-underline">
                     {faq.question}
                   </AccordionTrigger>
                   <AccordionContent className="pb-3.5 text-[13px] leading-[1.75] text-[#5C6570]">
@@ -127,7 +127,7 @@ export default function FAQPage() {
               <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-[#FAF1E6] text-[#C77B21]">
                 <MessageCircle className="h-5 w-5" />
               </div>
-              <h3 className="font-serif text-xl font-md text-[#17202A]">
+              <h3 className="font-sans text-xl font-md text-[#17202A]">
                 Still need guidance?
               </h3>
               <p className="mt-1.5 text-[13px] leading-[1.6] text-[#5C6570]">
@@ -152,7 +152,7 @@ export default function FAQPage() {
             </div>
 
             <div className="rounded-[24px] border border-[#E8DED2] bg-white p-4 shadow-sm">
-              <h3 className="font-serif text-[1rem] font-md text-[#17202A] mb-3">
+              <h3 className="font-sans text-[1rem] font-md text-[#17202A] mb-3">
                 Quick support areas
               </h3>
               <div className="grid gap-1.5">

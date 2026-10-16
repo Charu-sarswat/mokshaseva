@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { ChevronDown, Menu, MessageCircle, Phone } from "lucide-react";
 import { LogoMark } from "@/components/shared/logo";
+import { CallbackModal } from "@/components/shared/callback-modal";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -34,7 +35,7 @@ const navigation = [
     label: "International Services", href: "/services#international", children: [
       { label: "All International",  href: "/services#international"       },
       { label: "Body Repatriation",  href: "/services/body-repatriation"   },
-      { label: "Ashes Repatriation", href: "/services/ashes-repatriation"  },
+      { label: "Ash Immersion", href: "/services/ashes-repatriation"  },
       { label: "Embassy Assistance", href: "/services/embassy-assistance"  },
       { label: "Air Ambulance",      href: "/services/air-ambulance"       },
     ],
@@ -145,9 +146,13 @@ export function SiteHeader() {
           </nav>
 
           <div className="flex items-center justify-end">
-            <Button asChild className="hidden h-7 rounded-sm bg-[#F28A35] px-2 text-sm font-md text-white shadow-sm hover:bg-[#D97724] sm:inline-flex">
-              <Link href="/#contact">Request a Callback</Link>
-            </Button>
+            <CallbackModal
+              trigger={
+                <Button className="hidden h-7 rounded-sm bg-[#F28A35] px-2 text-sm font-md text-white shadow-sm hover:bg-[#D97724] sm:inline-flex cursor-pointer">
+                  Request a Callback
+                </Button>
+              }
+            />
             <MobileMenu />
           </div>
         </div>
@@ -189,6 +194,13 @@ function MobileMenu() {
           ))}
         </div>
         <div className="mt-5 grid gap-2">
+          <CallbackModal
+            trigger={
+              <Button className="h-10 bg-[#F28A35] text-white hover:bg-[#D97724] font-medium">
+                Request a Callback
+              </Button>
+            }
+          />
           <Button asChild className="h-10 bg-[#C77B21] text-white hover:bg-[#B66D1F]">
             <Link href="tel:+919568259784"><Phone className="mr-2 h-4 w-4" />Call Now</Link>
           </Button>

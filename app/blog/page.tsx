@@ -45,7 +45,7 @@ export default function BlogPage() {
                 Moksha Journal
               </span>
 
-              <h1 className="mt-1 font-serif text-2xl font-medium leading-[1.08] text-[#17202A] sm:text-5xl md:text-[56px]">
+              <h1 className="mt-1 font-sans text-2xl font-medium leading-[1.08] text-[#17202A] sm:text-5xl md:text-[56px]">
                 Thoughtful guidance for families.
               </h1>
 
@@ -89,7 +89,7 @@ export default function BlogPage() {
                     {post.date}
                   </div>
 
-                  <h2 className="font-serif text-[22px] font-medium leading-[1.18] text-[#17202A] transition group-hover:text-[#C77B21]">
+                  <h2 className="font-sans text-[22px] font-medium leading-[1.18] text-[#17202A] transition group-hover:text-[#C77B21]">
                     <Link href={`/resources/${post.slug}`}>{post.title}</Link>
                   </h2>
 

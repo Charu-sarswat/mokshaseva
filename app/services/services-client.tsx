@@ -89,7 +89,7 @@ export function ServicesClient() {
             <span className="inline-flex rounded-full border border-[#E8DED2] bg-white px-4 py-1.5 text-xs font-md uppercase tracking-[0.18em] text-[#C77B21]">
               {activeCat ? activeCat.label : "Our Services"}
             </span>
-            <h1 className="mt-3 max-w-3xl font-serif text-4xl font-md leading-[1.05] tracking-tight text-[#17202A] sm:text-5xl md:text-[3.4rem]">
+            <h1 className="mt-3 max-w-3xl font-sans text-4xl font-md leading-[1.05] tracking-tight text-[#17202A] sm:text-5xl md:text-[3.4rem]">
               {activeCat
                 ? activeCat.desc
                 : "Comprehensive care for families, across every step."}
@@ -188,7 +188,7 @@ export function ServicesClient() {
                   </div>
                   <div>
                     <p className="text-[11px] font-md uppercase tracking-[0.2em]" style={{ color: cat.color }}>{cat.eyebrow}</p>
-                    <h2 className="font-serif text-[1.6rem] font-md text-[#17202A] leading-tight">{cat.label}</h2>
+                    <h2 className="font-sans text-[1.6rem] font-md text-[#17202A] leading-tight">{cat.label}</h2>
                     <p className="mt-0.5 max-w-lg text-[13.5px] text-[#5C6570]">{cat.desc}</p>
                   </div>
                 </div>
@@ -227,7 +227,7 @@ export function ServicesClient() {
                       </div>
                       <div className="px-4 pb-3.5 pt-2">
                         <div className="mb-1.5 flex items-start justify-between gap-3">
-                          <h3 className="font-serif text-[18px] font-md leading-snug text-[#17202A] transition-colors group-hover:text-[#C77B21]">
+                          <h3 className="font-sans text-[18px] font-md leading-snug text-[#17202A] transition-colors group-hover:text-[#C77B21]">
                             {service.title}
                           </h3>
                           <ArrowRight className="mt-1 h-4 w-4 shrink-0 text-[#C77B21] transition-transform group-hover:translate-x-1" />
@@ -256,7 +256,7 @@ export function ServicesClient() {
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <p className="text-[10.5px] font-md uppercase tracking-[0.22em] text-[#C77B21]">Need help choosing?</p>
-              <h2 className="mt-0.5 font-serif text-[1.2rem] font-md text-[#17202A] sm:text-[1.4rem]">
+              <h2 className="mt-0.5 font-sans text-[1.2rem] font-md text-[#17202A] sm:text-[1.4rem]">
                 Not sure which service you need?
               </h2>
               <p className="mt-0.5 text-[12.5px] text-[#5C6570] max-w-md">

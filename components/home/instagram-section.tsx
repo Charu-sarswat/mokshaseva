@@ -67,7 +67,7 @@ export function InstagramSection() {
         <div className="flex items-center justify-between">
           <div>
             <p className="eyebrow">Instagram</p>
-            <h2 className="mt-1 font-serif text-2xl font-md text-[#222831] sm:text-3xl">
+            <h2 className="mt-1 font-sans text-2xl font-md text-[#222831] sm:text-3xl">
               Follow Us on Instagram
             </h2>
           </div>

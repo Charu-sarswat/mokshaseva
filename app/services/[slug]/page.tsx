@@ -23,6 +23,7 @@ import {
 import { servicesData } from "@/lib/data";
 import { PublicSiteLayout } from "@/components/public-site-layout";
 import { Button } from "@/components/ui/button";
+import { ServiceOverviewTabs } from "@/components/services/service-overview-tabs";
 
 type PageProps = { params: Promise<{ slug: string }> };
 
@@ -131,7 +132,7 @@ const SERVICE_CONTEXT: Record<string, { overviewHeading: string; quote: string }
   "memorial-services":      { overviewHeading: "Preserving memories that last forever.",                     quote: "A beautiful tribute keeps the spirit of your loved one alive for generations." },
   "ambulance-services":     { overviewHeading: "Prompt, dignified transport when it matters most.",          quote: "Every journey is handled with the care and respect your family deserves." },
   "body-repatriation":      { overviewHeading: "Safe, compliant transport across international borders.",    quote: "We ensure every regulation is met so your loved one travels home with full dignity." },
-  "ashes-repatriation":     { overviewHeading: "Respectful transport of cremated remains, worldwide.",       quote: "We handle every clearance and package with the utmost care and sensitivity." },
+  "ashes-repatriation":     { overviewHeading: "Respectful transport of cremated remains for ash immersion, worldwide.", quote: "We handle every clearance and package with the utmost care and sensitivity." },
   "embassy-assistance":     { overviewHeading: "Expert embassy liaison for international clearances.",       quote: "We navigate consular processes so your family doesn't have to." },
   "pandit-services":        { overviewHeading: "Experienced priests for every ceremony and tradition.",      quote: "The right Pandit ensures every rite is performed exactly as tradition requires." },
   "shraddh-services":       { overviewHeading: "Complete arrangements for ancestral rituals.",               quote: "Performed with Vedic authenticity to bring peace to the departed and the living." },
@@ -192,7 +193,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                   </span>
                 </div>
 
-                <h1 className="font-serif text-[2.6rem] font-md leading-[1.08] tracking-tight text-[#17202A] sm:text-5xl lg:text-[3.2rem]">
+                <h1 className="font-sans text-[2.6rem] font-md leading-[1.08] tracking-tight text-[#17202A] sm:text-5xl lg:text-[3.2rem]">
                   {service.title}
                 </h1>
 
@@ -215,7 +216,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
               <div className="grid grid-cols-3 divide-x divide-[#E8DED2] rounded-2xl border border-[#E8DED2] bg-white overflow-hidden shadow-sm">
                 {cat.stats.map(({ num, label }) => (
                   <div key={label} className="flex flex-col items-center py-4 px-2">
-                    <p className="font-serif text-[1.6rem] font-md text-[#C77B21] leading-none">{num}</p>
+                    <p className="font-sans text-[1.6rem] font-md text-[#C77B21] leading-none">{num}</p>
                     <p className="mt-1 text-[11px] text-[#687684] text-center">{label}</p>
                   </div>
                 ))}
@@ -268,35 +269,32 @@ export default async function ServiceDetailPage({ params }: PageProps) {
           {/* Main */}
           <div className="space-y-4">
 
-            {/* Overview */}
-            <div className="rounded-[22px] border border-[#E8DED2] bg-white p-5 shadow-sm">
-              <span className="text-[11px] font-md uppercase tracking-[0.18em] text-[#C77B21]">Overview</span>
-              <h2 className="mt-1.5 font-serif text-[1.6rem] font-md text-[#17202A]">
-                {ctx.overviewHeading}
-              </h2>
-              <p className="mt-2 text-[14px] leading-[1.8] text-[#5C6570]">
-                {service.content.overview}
-              </p>
-              <div className="mt-4 rounded-xl border border-[#E8D4BD] bg-[#FFF8EF] p-4">
-                <Quote className="mb-2 h-5 w-5 text-[#C77B21]/40" />
-                <p className="font-serif text-[15px] italic text-[#17202A] leading-relaxed">"{ctx.quote}"</p>
-                <p className="mt-1.5 text-[12px] text-[#687684]">— Vijay Sharma, Founder & Care Director</p>
-              </div>
-              {/* Category trust row */}
+            {/* Dynamic Overview with Country Tabs */}
+            <ServiceOverviewTabs
+              slug={slug}
+              defaultHeading={ctx.overviewHeading}
+              defaultOverview={service.content.overview}
+              quote={ctx.quote}
+            >
               <div className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-4">
                 {cat.commitments.map(({ icon: I, label }) => (
-                  <div key={label} className="flex items-center gap-2 rounded-xl border border-[#E8DED2] bg-[#FAF8F4] px-3 py-2.5">
+                  <div
+                    key={label}
+                    className="flex items-center gap-2 rounded-xl border border-[#E8DED2] bg-[#FAF8F4] px-3 py-2.5"
+                  >
                     <I className="h-3.5 w-3.5 shrink-0 text-[#C77B21]" />
-                    <span className="text-[11.5px] font-medium text-[#17202A] leading-tight">{label}</span>
+                    <span className="text-[11.5px] font-medium leading-tight text-[#17202A]">
+                      {label}
+                    </span>
                   </div>
                 ))}
               </div>
-            </div>
+            </ServiceOverviewTabs>
 
             {/* What's included */}
             <div className="rounded-[22px] border border-[#E8DED2] bg-white p-5 shadow-sm">
               <span className="text-[11px] font-md uppercase tracking-[0.18em] text-[#C77B21]">Included</span>
-              <h3 className="mt-1.5 font-serif text-[1.6rem] font-md text-[#17202A]">What's included</h3>
+              <h3 className="mt-1.5 font-sans text-[1.6rem] font-md text-[#17202A]">What's included</h3>
               <p className="mt-1 text-[13.5px] text-[#5C6570]">Every detail is managed — so your family can focus on what truly matters.</p>
               <ul className="mt-4 grid gap-2 sm:grid-cols-2">
                 {service.content.whatIsIncluded.map((item, idx) => (
@@ -311,7 +309,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
             {/* Process */}
             <div className="rounded-[22px] border border-[#E8DED2] bg-white p-5 shadow-sm">
               <span className="text-[11px] font-md uppercase tracking-[0.18em] text-[#C77B21]">Process</span>
-              <h3 className="mt-1.5 font-serif text-[1.6rem] font-md text-[#17202A]">How our care team handles it</h3>
+              <h3 className="mt-1.5 font-sans text-[1.6rem] font-md text-[#17202A]">How our care team handles it</h3>
               <p className="mt-1 text-[13.5px] text-[#5C6570]">A clear, compassionate process from the first call to final completion.</p>
               <div className="mt-4 space-y-3">
                 {service.content.process.map((step, idx) => (
@@ -331,7 +329,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
             {/* Why us — category-specific */}
             <div className="rounded-[22px] border border-[#E8DED2] bg-white p-5 shadow-sm">
               <span className="text-[11px] font-md uppercase tracking-[0.18em] text-[#C77B21]">Why us</span>
-              <h3 className="mt-1.5 font-serif text-[1.6rem] font-md text-[#17202A]">Why families choose Moksha Voyage</h3>
+              <h3 className="mt-1.5 font-sans text-[1.6rem] font-md text-[#17202A]">Why families choose Moksha Voyage</h3>
               <div className="mt-4 grid gap-3 sm:grid-cols-3">
                 {cat.whyCards.map(({ icon: I, title, desc }) => (
                   <div key={title} className="rounded-xl border border-[#E8DED2] bg-[#FAF8F4] p-4">
@@ -355,7 +353,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
               <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-[#FFF1E2] text-[#C77B21]">
                 <Headphones className="h-5 w-5" />
               </div>
-              <h3 className="font-serif text-[1.1rem] font-md text-[#17202A]">Need assistance?</h3>
+              <h3 className="font-sans text-[1.1rem] font-md text-[#17202A]">Need assistance?</h3>
               <p className="mt-1.5 text-[13px] leading-[1.6] text-[#5C6570]">
                 Our care team is ready to guide your family with {service.title.toLowerCase()} and related support.
               </p>
@@ -384,7 +382,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
             {/* Related services from same category */}
             <div className="rounded-[22px] border border-[#E8DED2] bg-white p-4 shadow-sm">
               <p className="text-[11px] font-md uppercase tracking-[0.18em] text-[#C77B21] mb-1">Related</p>
-              <h3 className="font-serif text-[1rem] font-md text-[#17202A] mb-3">{cat.label}</h3>
+              <h3 className="font-sans text-[1rem] font-md text-[#17202A] mb-3">{cat.label}</h3>
               <div className="grid gap-1.5">
                 {relatedServices.map((s) => (
                   <Link key={s.slug} href={`/services/${s.slug}`} className="group flex items-center justify-between rounded-xl border border-[#E8DED2] bg-[#FAF8F4] px-3 py-2.5 text-[12.5px] font-medium text-[#5C6570] transition hover:bg-white hover:text-[#C77B21]">

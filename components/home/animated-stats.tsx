@@ -42,7 +42,7 @@ export function AnimatedStats() {
   }, []);
 
   return (
-    <section className="bg-white px-2 py-2 sm:px-3">
+    <section className="bg-white px-2 pt-1 pb-2 sm:px-3 sm:pt-1 sm:pb-3">
       <div className="mx-auto grid max-w-[1780px] gap-2 sm:grid-cols-2 lg:grid-cols-6">
         {activeStats.map((stat) => (
           <AnimatedStatCard key={`${stat.label}-${stat.value}`} stat={stat} />

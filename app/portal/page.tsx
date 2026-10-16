@@ -12,7 +12,7 @@ export default function PortalPage() {
           <div className="mb-6 flex flex-col justify-between gap-3 md:flex-row md:items-center">
             <div>
               <p className="text-sm font-md uppercase tracking-[0.18em] text-gold">Family portal</p>
-              <h1 className="font-serif text-4xl font-md">Case MV-2026-0148</h1>
+              <h1 className="font-sans text-4xl font-md">Case MV-2026-0148</h1>
               <p className="mt-2 text-sm text-ink/65">International repatriation from London to Mumbai.</p>
             </div>
             <Link href="/" className="rounded-full border border-line bg-white px-4 py-2 text-sm font-md shadow-sm">

@@ -32,7 +32,7 @@ export const servicePillars = [
     slug: "international-repatriation",
     description: "Embassy, airline, airport, cargo, customs, and documentation coordination across borders.",
     icon: Globe2,
-    features: ["Body repatriation", "Ashes repatriation", "Embassy clearance", "Airport handover"]
+    features: ["Body repatriation", "Ash Immersion", "Embassy clearance", "Airport handover"]
   },
   {
     title: "Travel & Hospitality",
@@ -95,7 +95,7 @@ export const packages = [
   {
     name: "Global Passage",
     price: "Case based",
-    description: "For international body or ashes repatriation.",
+    description: "For international body repatriation or ash immersion.",
     items: ["Embassy support", "Airline coordination", "Document tracking", "Airport clearance"]
   },
   {

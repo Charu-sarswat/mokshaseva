@@ -115,7 +115,7 @@ export function GlobalReach() {
           <span className="mb-3 inline-flex items-center gap-1.5 rounded-full border border-[#F0D9C1] bg-[#FFF1E8] px-3 py-1 text-[11px] font-md tracking-widest text-[#D1842F] uppercase">
             <Globe2 className="h-3 w-3" /> Global Footprint
           </span>
-          <h2 className="font-serif text-3xl font-medium text-[#17202A] sm:text-4xl leading-tight">
+          <h2 className="font-sans text-3xl font-medium text-[#17202A] sm:text-4xl leading-tight">
             Bringing Loved Ones Home,{" "}
             <br className="hidden sm:block" />
             <span
@@ -221,7 +221,7 @@ export function GlobalReach() {
                   className="h-5 w-5 shrink-0"
                   style={{ color: area.accent }}
                 />
-                <h3 className="font-serif text-2xl font-md text-[#17202A]">
+                <h3 className="font-sans text-2xl font-md text-[#17202A]">
                   {area.region}
                 </h3>
               </div>

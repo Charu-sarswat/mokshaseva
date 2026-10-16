@@ -38,7 +38,7 @@ export function VideoSection() {
         <div className="mb-7 flex items-center justify-between">
           <div>
             <p className="eyebrow">Watch Us Work</p>
-            <h2 className="mt-1 font-serif text-2xl font-md text-[#222831] sm:text-3xl">
+            <h2 className="mt-1 font-sans text-2xl font-md text-[#222831] sm:text-3xl">
               Stories of Care & Compassion
             </h2>
           </div>

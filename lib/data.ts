@@ -60,7 +60,7 @@ export const servicesData: ServiceData[] = [
     id: "international-repatriation",
     slug: "international-repatriation",
     title: "International Repatriation",
-    shortDescription: "Dignified body and ashes repatriation worldwide.",
+    shortDescription: "Dignified body repatriation and sacred ash immersion worldwide.",
     icon: Plane,
     heroImage: "/images/moksha/international.png",
     content: {
@@ -227,24 +227,24 @@ export const servicesData: ServiceData[] = [
   {
     id: "ashes-repatriation",
     slug: "ashes-repatriation",
-    title: "Ashes Repatriation",
-    shortDescription: "Respectful transport of cremated remains.",
+    title: "Ash Immersion",
+    shortDescription: "Respectful transport of cremated remains for sacred ash immersion.",
     icon: ShieldCheck,
     heroImage: "/images/moksha/ashes.png",
     content: {
-      overview: "Transporting cremated remains across international borders requires specific documentation and specialized packing. We offer secure and respectful ashes repatriation services.",
+      overview: "Transporting cremated remains across international borders for sacred ash immersion requires specific documentation and specialized packing. We offer secure and respectful ash immersion services.",
       whatIsIncluded: [
-        "Appropriate urns for international travel",
+        "Appropriate urns for international travel and ash immersion",
         "Customs declarations and clearances",
-        "Embassy NOC for ashes",
+        "Embassy NOC for ash immersion transit",
         "Secure packaging for air transit",
-        "Door-to-door delivery options"
+        "Door-to-door delivery and ghat ash immersion support"
       ],
       process: [
         { step: 1, title: "Documentation", description: "Gathering cremation certificates and death certificates." },
-        { step: 2, title: "Clearance", description: "Obtaining required permissions from embassies." },
-        { step: 3, title: "Packaging", description: "Packing the urn securely in accordance with airline policies." },
-        { step: 4, title: "Transport", description: "Sending the ashes via cargo or as accompanied baggage." }
+        { step: 2, title: "Clearance", description: "Obtaining required permissions from embassies and consulates." },
+        { step: 3, title: "Packaging", description: "Packing the sacred urn securely in accordance with airline policies." },
+        { step: 4, title: "Transport", description: "Sending the sacred remains for ash immersion via cargo or accompanied baggage." }
       ]
     }
   },

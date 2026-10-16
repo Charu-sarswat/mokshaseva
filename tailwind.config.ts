@@ -62,12 +62,17 @@ const config = {
   				'var(--font-sans)',
   				'Inter',
   				'system-ui',
+  				'-apple-system',
+  				'BlinkMacSystemFont',
   				'sans-serif'
   			],
   			serif: [
-  				'var(--font-serif)',
-  				'Georgia',
-  				'serif'
+  				'var(--font-sans)',
+  				'Inter',
+  				'system-ui',
+  				'-apple-system',
+  				'BlinkMacSystemFont',
+  				'sans-serif'
   			]
   		},
   		borderRadius: {

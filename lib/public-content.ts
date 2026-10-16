@@ -46,13 +46,13 @@ export const services: PublicService[] = [
     title: "International Repatriation",
     slug: "international-repatriation",
     category: "international",
-    shortDescription: "Body and ashes repatriation worldwide",
+    shortDescription: "Body repatriation and ash immersion worldwide",
     description: "Embassy, airline, airport, customs, cargo and documentation coordination for global repatriation cases.",
     icon: Plane,
-    features: ["Body repatriation", "Ashes repatriation", "Embassy coordination", "Airport clearance"],
+    features: ["Body repatriation", "Ash Immersion", "Embassy coordination", "Airport clearance"],
     image: "/images/moksha/travel-assistance.png",
     seoTitle: "International Repatriation | Moksha Voyage",
-    seoDescription: "Trusted international body and ashes repatriation support across countries."
+    seoDescription: "Trusted international body repatriation and ash immersion support across countries."
   },
   {
     title: "Spiritual Services",
@@ -177,7 +177,7 @@ export const faqs = [
 export const resources = [
   { title: "International Repatriation Process Explained", slug: "international-repatriation-process", type: "guide", description: "A practical guide to documents, embassy steps and airline coordination.", thumbnail: "/images/moksha/travel-assistance.png", category: "International" },
   { title: "Understanding Shraddh Rituals & Their Importance", slug: "understanding-shraddh", type: "article", description: "A respectful overview of Shraddh rituals and family remembrance.", thumbnail: "/images/moksha/spiritual-diya.png", category: "Spiritual" },
-  { title: "Documents Required for Repatriation", slug: "documents-required-for-repatriation", type: "checklist", description: "Core document checklist for body and ashes repatriation.", thumbnail: "/images/moksha/documentation-guide.png", category: "Documentation" },
+  { title: "Documents Required for Repatriation", slug: "documents-required-for-repatriation", type: "checklist", description: "Core document checklist for body repatriation and ash immersion.", thumbnail: "/images/moksha/documentation-guide.png", category: "Documentation" },
   { title: "How to Support Someone Who is Grieving", slug: "support-someone-grieving", type: "article", description: "Simple ways to support a family through grief.", thumbnail: "/images/moksha/grief-support.png", category: "Support" }
 ];
 
@@ -193,7 +193,7 @@ export const blogs = resources.map((resource) => ({
 
 export const packages = [
   { name: "Essential Care", slug: "essential-care", description: "For local funeral support and family coordination.", price: "Custom Quote", items: ["Coordinator", "Service checklist", "Vendor scheduling", "Payment tracking"], badge: "Most requested" },
-  { name: "Global Passage", slug: "global-passage", description: "For international body or ashes repatriation.", price: "Case Based", items: ["Embassy support", "Airline coordination", "Document tracking", "Airport clearance"], badge: "International" },
+  { name: "Global Passage", slug: "global-passage", description: "For international body repatriation or ash immersion.", price: "Case Based", items: ["Embassy support", "Airline coordination", "Document tracking", "Airport clearance"], badge: "International" },
   { name: "Concierge Ritual", slug: "concierge-ritual", description: "For spiritual services, travel, hospitality and VIP arrangements.", price: "Premium", items: ["Pandit booking", "Travel desk", "Guest logistics", "Digital memorial"], badge: "Premium" }
 ];
 

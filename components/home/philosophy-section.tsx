@@ -27,7 +27,7 @@ export function PhilosophySection() {
           {/* Text Side */}
           <div className="flex flex-col justify-center">
             <p className="eyebrow">Our Philosophy</p>
-            <h2 className="mt-2 font-serif text-3xl font-medium leading-tight text-[#17202A] sm:text-4xl md:text-5xl">
+            <h2 className="mt-2 font-sans text-3xl font-medium leading-tight text-[#17202A] sm:text-4xl md:text-5xl">
               Empathy Before Everything.
             </h2>
             <div className="mt-6 space-y-6 text-lg leading-8 text-[#5C6570]">

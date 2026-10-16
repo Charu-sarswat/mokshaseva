@@ -18,7 +18,7 @@ export default function AdminPage() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6">
           <div>
             <p className="text-sm font-md uppercase tracking-[0.18em] text-gold">Moksha Voyage Admin</p>
-            <h1 className="font-serif text-3xl font-md">Operations command center</h1>
+            <h1 className="font-sans text-3xl font-md">Operations command center</h1>
           </div>
           <Link href="/" className="rounded-full bg-ink px-4 py-2 text-sm font-md text-white">
             Public site

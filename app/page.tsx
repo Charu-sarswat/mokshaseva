@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
   Ambulance,
@@ -37,12 +38,17 @@ import { VideoSection } from "@/components/home/video-section";
 import { InstagramSection } from "@/components/home/instagram-section";
 import { PageTransition } from "@/components/page-transition";
 
-const serviceItems = servicesData.map(s => ({
-  title: s.title,
-  description: s.shortDescription,
-  icon: s.icon,
-  slug: s.slug
-})).slice(0, 10); // keep to 10 for showcase
+const excludedShowcaseSlugs = ["ambulance-services", "body-repatriation"];
+
+const serviceItems = servicesData
+  .filter((s) => !excludedShowcaseSlugs.includes(s.slug))
+  .map((s) => ({
+    title: s.title,
+    description: s.shortDescription,
+    icon: s.icon,
+    slug: s.slug
+  }))
+  .slice(0, 10); // keep to 10 for showcase
 
 const airlinePartners = ["BRITISH AIRWAYS", "Emirates", "QATAR AIRWAYS", "SINGAPORE AIRLINES", "TURKISH AIRLINES", "AIR INDIA"];
 
@@ -57,9 +63,9 @@ const trust: [string, string, LucideIcon][] = [
 const heroSlides: HeroSlide[] = [
   {
     image: "/images/moksha/hero-lotus-sunrise.png",
-    title: "Compassionate Care",
-    highlight: "When You Need It Most",
-    description: "We are here to support you with dignified funeral services, international repatriation, spiritual care and everything in between."
+    title: "Compassionate Care Across",
+    highlight: "The United Kingdom & India",
+    description: "We are here to support families across the UK, India and worldwide with dignified funeral services, international repatriation, spiritual care and dedicated guidance when you need it most."
   },
   {
     image: "/images/moksha/hero1.png",
@@ -81,11 +87,42 @@ const heroSlides: HeroSlide[] = [
   }
 ];
 
+const faithFuneralOptions = [
+  { name: "Hindu Funerals", image: "/images/moksha/f1.png", href: "/services/funeral-services" },
+  { name: "Sikh Funerals", image: "/images/moksha/f2.png", href: "/services/funeral-services" },
+  { name: "Buddhist Funerals", image: "/images/moksha/f3.png", href: "/services/funeral-services" },
+  { name: "Christian Funerals", image: "/images/moksha/f4.png", href: "/services/funeral-services" }
+];
+
 export default function Home() {
   return (
     <PublicSiteLayout>
       <PageTransition>
         <HeroCarousel slides={heroSlides} />
+
+        <section className="bg-white px-4 py-1.5 sm:px-6 sm:py-2">
+          <div className="mx-auto max-w-7xl">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4">
+              {faithFuneralOptions.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="group relative block overflow-hidden rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-[#D1842F]/50"
+                >
+                  <Image
+                    src={item.image}
+                    alt={item.name}
+                    width={500}
+                    height={170}
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 320px"
+                    className="h-auto w-full object-contain transition-transform duration-300 group-hover:scale-[1.02]"
+                    priority
+                  />
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
 
         <AnimatedStats />
 
@@ -96,8 +133,6 @@ export default function Home() {
         <PhilosophySection />
 
         <ServicesShowcase services={serviceItems} />
-
-        <VideoSection />
 
         <HearseVanSection />
 

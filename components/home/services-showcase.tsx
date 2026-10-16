@@ -32,7 +32,7 @@ export function ServicesShowcase({ services }: ServicesShowcaseProps) {
               <p className="eyebrow">Our services</p>
               <span className="h-px w-28 bg-[#D1842F]/35" />
             </div>
-            <h2 className="mt-2 font-serif text-4xl font-md leading-tight text-[#17202A] sm:text-5xl">
+            <h2 className="mt-2 font-sans text-4xl font-md leading-tight text-[#17202A] sm:text-5xl">
               Complete Care, Everywhere
             </h2>
             <div className="mt-3 h-px w-24 bg-[#D1842F]/35" />
@@ -60,9 +60,9 @@ export function ServicesShowcase({ services }: ServicesShowcaseProps) {
                 <span className="mx-auto grid h-14 w-14 place-items-center rounded-full bg-[#FFF3E5] text-[#D1842F]">
                   <Icon className="h-7 w-7" />
                 </span>
-                <h3 className="mt-3 text-sm font-md text-[#17202A]">{service.title}</h3>
+                <h3 className="mt-3 text-[16px] font-md text-[#17202A]">{service.title}</h3>
                 <div className="mx-auto mt-2 h-px w-12 bg-[#D1842F]/30" />
-                <p className="mx-auto mt-2 max-w-[165px] text-xs leading-5 text-gray-900">{service.description}</p>
+                <p className="mx-auto mt-2 max-w-[210px] text-[14px] leading-[1.6] text-[#5C6570]">{service.description}</p>
               </Link>
             );
           })}

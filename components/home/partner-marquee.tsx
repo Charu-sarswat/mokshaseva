@@ -18,7 +18,7 @@ export function PartnerMarquee() {
     <section className="overflow-hidden border-y border-[#EDE6DD] bg-[#FCFBF8] px-4 py-6 sm:px-6 md:py-6">
       <div className="mx-auto max-w-7xl text-center">
         <p className="eyebrow">Trusted By</p>
-        <h2 className="mt-2 font-serif text-2xl font-md text-[#17202A] sm:text-3xl">
+        <h2 className="mt-2 font-sans text-2xl font-md text-[#17202A] sm:text-3xl">
           Global Airlines & Partners
         </h2>
       </div>

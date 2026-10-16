@@ -118,7 +118,7 @@ export default function AboutPage() {
                 About Moksha Voyage
               </span>
 
-              <h1 className="font-serif text-[42px] font-md leading-[1.02] tracking-[-0.03em] text-[#121A24] sm:text-[56px] lg:text-[68px]">
+              <h1 className="font-sans text-[42px] font-md leading-[1.02] tracking-[-0.03em] text-[#121A24] sm:text-[56px] lg:text-[68px]">
                 Compassion across borders.
               </h1>
 
@@ -150,7 +150,7 @@ export default function AboutPage() {
               {stats.map(({ icon: Icon, num, label }) => (
                 <div key={label} className="rounded-2xl bg-white/70 p-3.5">
                   <Icon className="mb-2 h-5 w-5 text-[#C77B21]" />
-                  <p className="font-serif text-[28px] font-md leading-none text-[#17202A]">
+                  <p className="font-sans text-[28px] font-md leading-none text-[#17202A]">
                     {num}
                   </p>
                   <p className="mt-1 text-[12px] text-[#617080]">{label}</p>
@@ -177,7 +177,7 @@ export default function AboutPage() {
                 Our Philosophy
               </p>
 
-              <h2 className="font-serif text-[32px] font-md leading-tight tracking-[-0.02em] text-[#121A24] sm:text-[42px]">
+              <h2 className="font-sans text-[32px] font-md leading-tight tracking-[-0.02em] text-[#121A24] sm:text-[42px]">
                 More than logistics. A hand to hold.
               </h2>
 
@@ -195,7 +195,7 @@ export default function AboutPage() {
 
               <div className="mt-5 rounded-2xl border border-[#E8D4BD] bg-gradient-to-b from-white to-[#FFFBF6] p-5 shadow-sm">
                 <Quote className="mb-3 h-6 w-6 text-[#C77B21]/45" />
-                <p className="font-serif text-[20px] italic leading-[1.5] text-[#17202A]">
+                <p className="font-sans text-[20px] italic leading-[1.5] text-[#17202A]">
                   “Our promise is simple: to treat your loved one with the same
                   dignity and respect as we would our own family.”
                 </p>
@@ -217,7 +217,7 @@ export default function AboutPage() {
               <p className="mb-2 text-[11px] font-md uppercase tracking-[0.24em] text-[#C77B21]">
                 What guides us
               </p>
-              <h2 className="font-serif text-[32px] font-md leading-tight tracking-[-0.02em] sm:text-[42px]">
+              <h2 className="font-sans text-[32px] font-md leading-tight tracking-[-0.02em] sm:text-[42px]">
                 Built on care, trust and dignity.
               </h2>
             </div>
@@ -251,7 +251,7 @@ export default function AboutPage() {
                 <p className="mb-2 text-[11px] font-md uppercase tracking-[0.24em] text-[#C77B21]">
                   How it works
                 </p>
-                <h2 className="font-serif text-[32px] font-md leading-tight tracking-[-0.02em] sm:text-[42px]">
+                <h2 className="font-sans text-[32px] font-md leading-tight tracking-[-0.02em] sm:text-[42px]">
                   Simple steps. Complete support.
                 </h2>
               </div>
@@ -310,7 +310,7 @@ export default function AboutPage() {
                 <p className="mb-2 text-[11px] font-md uppercase tracking-[0.24em] text-[#C77B21]">
                   Global presence
                 </p>
-                <h2 className="font-serif text-[30px] font-md leading-tight tracking-[-0.02em] sm:text-[40px]">
+                <h2 className="font-sans text-[30px] font-md leading-tight tracking-[-0.02em] sm:text-[40px]">
                   Supporting families across borders.
                 </h2>
               </div>
@@ -370,7 +370,7 @@ export default function AboutPage() {
                   We are here for you
                 </p>
 
-                <h2 className="font-serif text-[34px] font-md leading-tight tracking-[-0.02em] sm:text-[46px]">
+                <h2 className="font-sans text-[34px] font-md leading-tight tracking-[-0.02em] sm:text-[46px]">
                   Support when your family needs it most.
                 </h2>
 

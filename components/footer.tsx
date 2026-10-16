@@ -20,7 +20,7 @@ const footerColumns = [
     title: "International",
     links: [
       { label: "Body Repatriation", href: "/services/body-repatriation" },
-      { label: "Ashes Repatriation", href: "/services/ashes-repatriation" },
+      { label: "Ash Immersion", href: "/services/ashes-repatriation" },
       { label: "Documentation Support", href: "/services/documentation-support" },
       { label: "Air Ambulance", href: "/services/air-ambulance" },
       { label: "Embassy Assistance", href: "/services/embassy-assistance" }
@@ -74,7 +74,7 @@ export function SiteFooter() {
           {/* Links Columns */}
           {footerColumns.map((column) => (
             <div key={column.title}>
-              <h3 className="mb-4 font-serif text-lg font-md text-[#17202A]">{column.title}</h3>
+              <h3 className="mb-4 font-sans text-lg font-md text-[#17202A]">{column.title}</h3>
               <ul className="space-y-2.5 text-[14px] text-[#5C6570]">
                 {column.links.map((link) => (
                   <li key={link.label}>
@@ -89,7 +89,7 @@ export function SiteFooter() {
 
           {/* Newsletter / Contact */}
           <div>
-            <h3 className="mb-4 font-serif text-lg font-md text-[#17202A]">Emergency Support</h3>
+            <h3 className="mb-4 font-sans text-lg font-md text-[#17202A]">Emergency Support</h3>
             <div className="space-y-3 rounded-xl border border-[#EDE6DD] bg-white p-4 shadow-sm">
               <div className="flex items-start gap-3">
                 <Phone className="mt-1 h-5 w-5 shrink-0 text-[#D1842F]" />

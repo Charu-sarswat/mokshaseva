@@ -80,7 +80,7 @@ export function HowItWorksCarousel() {
     <section id="process" className="px-4 pb-5 pt-4 sm:px-6">
       <div className="mx-auto max-w-7xl">
         <p className="eyebrow">How it works</p>
-        <h2 className="mt-1 font-serif text-2xl font-md text-[#222831] sm:text-3xl">
+        <h2 className="mt-1 font-sans text-2xl font-md text-[#222831] sm:text-3xl">
           Simple Steps. Complete Support.
         </h2>
 
@@ -95,7 +95,7 @@ export function HowItWorksCarousel() {
               </span>
             </div>
 
-            <h3 className="mt-4 font-serif text-3xl font-md text-[#17202A]">{activeStep.title}</h3>
+            <h3 className="mt-4 font-sans text-3xl font-md text-[#17202A]">{activeStep.title}</h3>
             <p className="mt-2 max-w-xl text-base leading-7 text-[#4E5661]">{activeStep.shortText}</p>
             <p className="mt-3 max-w-2xl text-sm leading-7 text-[#4E5661]">{activeStep.details}</p>
 

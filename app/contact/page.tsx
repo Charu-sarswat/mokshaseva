@@ -69,7 +69,7 @@ export default function ContactPage() {
                   Contact Moksha Voyage
                 </span>
 
-                <h1 className="mt-3 font-serif text-[38px] font-md leading-[1.04] tracking-[-0.03em] text-[#121A24] sm:text-[52px] lg:text-[62px]">
+                <h1 className="mt-3 font-sans text-[38px] font-md leading-[1.04] tracking-[-0.03em] text-[#121A24] sm:text-[52px] lg:text-[62px]">
                   We are here when your family needs support.
                 </h1>
 
@@ -142,7 +142,7 @@ export default function ContactPage() {
                 <p className="mb-1.5 text-[11px] font-md uppercase tracking-[0.24em] text-[#C77B21]">
                   Reach Out
                 </p>
-                <h2 className="font-serif text-[26px] font-md leading-tight tracking-[-0.02em] text-[#121A24] sm:text-[32px]">
+                <h2 className="font-sans text-[26px] font-md leading-tight tracking-[-0.02em] text-[#121A24] sm:text-[32px]">
                   Choose the support channel that works best.
                 </h2>
                 <p className="mt-2 text-[13px] leading-[1.7] text-[#5C6570]">
@@ -184,7 +184,7 @@ export default function ContactPage() {
                   <p className="mb-1.5 text-[11px] font-md uppercase tracking-[0.24em] text-[#C77B21]">
                     Send a Message
                   </p>
-                  <h3 className="font-serif text-[26px] font-md leading-tight tracking-[-0.02em] text-[#121A24] sm:text-[32px]">
+                  <h3 className="font-sans text-[26px] font-md leading-tight tracking-[-0.02em] text-[#121A24] sm:text-[32px]">
                     Tell us how we can help.
                   </h3>
                   <p className="mt-1.5 max-w-xl text-[13px] leading-[1.7] text-[#5C6570]">
@@ -279,7 +279,7 @@ export default function ContactPage() {
                 <p className="text-[11px] font-md uppercase tracking-[0.24em] text-[#C77B21]">
                   Immediate Assistance
                 </p>
-                <h2 className="mt-1 font-serif text-[24px] font-md leading-tight text-[#17202A] sm:text-[30px]">
+                <h2 className="mt-1 font-sans text-[24px] font-md leading-tight text-[#17202A] sm:text-[30px]">
                   You focus on your family. We'll handle the rest.
                 </h2>
               </div>

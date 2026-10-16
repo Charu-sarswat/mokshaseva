@@ -1,45 +1,54 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Phone, Truck, CheckCircle2 } from "lucide-react";
+import { Phone, ArrowRight, CheckCircle2 } from "lucide-react";
 import Link from "next/link";
 
 const slides = [
   {
-    image: "/images/moksha/h1.png",
-    eyebrow: "Our Specialized Fleet",
-    title: "Purpose-Built Hearse Vans",
+    image: "/images/moksha/temp.png",
+    eyebrow: "Spiritual Services",
+    title: "Spiritual Services",
     description:
-      "Our specially designed hearse vans are purpose-built for dignified and secure transit. Each vehicle is maintained to the highest standards, ensuring a smooth and respectful journey for your loved one.",
+      "Guidance and support for Hindu rituals and ceremonies across the UK and India.",
     features: [
-      "Fully AC & sanitized before every trip",
-      "Dedicated driver & care coordinator",
-      "Available for local & outstation routes",
+      "Experienced Pandits for Antim Sanskar, Puja and Shraddh",
+      "Traditional rituals arranged at home, temple or crematorium",
+      "Support for families living in the UK, with ceremonies coordinated in India",
+      "Respectful arrangements for every family’s traditions and customs",
     ],
+    buttonText: "Explore Spiritual Services",
+    buttonHref: "/services/spiritual-services",
   },
   {
-    image: "/images/moksha/h2.png",
-    eyebrow: "Safe & Comfortable",
-    title: "Temperature Controlled Transport",
+    image: "/images/moksha/tra.png",
+    eyebrow: "Travel & Hospitality",
+    title: "Travel & Hospitality",
     description:
-      "We provide temperature-controlled and freezer-equipped vehicles where required, ensuring the mortal remains are preserved and transported with the utmost care and dignity.",
+      "Compassionate travel support for families during difficult journeys between the UK and India.",
     features: [
-      "Freezer van available on request",
-      "Sealed & secure compartment",
-      "Compliant with health & transport guidelines",
+      "Flight coordination for family members travelling with or after a loved one",
+      "Hotel and accommodation arrangements near airports, hospitals and cremation locations",
+      "Airport transfers and local transportation for grieving families",
+      "UK–India travel coordination with dedicated family support",
     ],
+    buttonText: "Explore Travel Support",
+    buttonHref: "/services/travel-hospitality",
   },
   {
-    image: "/images/moksha/h3.png",
-    eyebrow: "Family-First Approach",
-    title: "Space for the Family, Always",
+    image: "/images/moksha/doc.png",
+    eyebrow: "Documentation Support",
+    title: "Documentation Support",
     description:
-      "Our vans include comfortable seating for accompanying family members, so your loved ones are never alone on their final journey. Our trained, compassionate staff are with you at every step.",
+      "Complete documentation and embassy coordination for UK–India repatriation.",
     features: [
-      "Seating for family members",
-      "Trained & sensitive support staff",
-      "24/7 emergency availability across India",
+      "Death certificate and required document assistance",
+      "Embassy and consular coordination",
+      "NOC, attestation and airline documentation support",
+      "End-to-end guidance for international repatriation paperwork",
     ],
+    buttonText: "Documentation Guidance",
+    buttonHref: "/services/documentation-support",
   },
 ];
 
@@ -47,11 +56,11 @@ export function HearseVanSection() {
   const [active, setActive] = useState(0);
   const slide = slides[active];
 
-  // Auto-play: change slide every 4 seconds
+  // Auto-play: change slide every 5 seconds
   useEffect(() => {
     const timer = setInterval(() => {
       setActive((prev) => (prev + 1) % slides.length);
-    }, 4000);
+    }, 5000);
     return () => clearInterval(timer);
   }, []);
 
@@ -64,9 +73,8 @@ export function HearseVanSection() {
 
         {/* Section Header */}
         <div className="mb-6 text-center">
-          <p className="eyebrow">Transport Services</p>
-          <h2 className="mt-1.5 font-serif text-2xl font-md text-[#222831] sm:text-3xl">
-            Premium Hearse Van Services
+          <h2 className="font-sans text-2xl font-md text-[#222831] sm:text-3xl">
+            Our Dedicated Services in UK & India
           </h2>
         </div>
 
@@ -95,7 +103,7 @@ export function HearseVanSection() {
           {/* Content */}
           <div className="flex-1">
             <p className="eyebrow">{slide.eyebrow}</p>
-            <h3 className="mt-2 font-serif text-2xl font-md text-[#222831] sm:text-3xl">
+            <h3 className="mt-2 font-sans text-2xl font-md text-[#222831] sm:text-3xl">
               {slide.title}
             </h3>
             <p className="mt-3 text-sm leading-relaxed text-[#4E5661]">
@@ -115,27 +123,30 @@ export function HearseVanSection() {
 
             <div className="mt-6 flex flex-wrap items-center gap-4">
               <Link
-                href="tel:+919568259784"
+                href={slide.buttonHref}
                 className="inline-flex h-11 items-center gap-2 rounded-full bg-gradient-to-r from-[#D1842F] to-[#B06B22] px-5 text-sm font-md text-white shadow-md transition-all hover:-translate-y-0.5 hover:shadow-lg"
               >
-                <Truck className="h-4 w-4" />
-                Book a Hearse Van
+                {slide.buttonText}
+                <ArrowRight className="h-4 w-4" />
               </Link>
-              <div className="flex items-center gap-2 text-sm font-md text-[#17202A]">
+              <Link
+                href="tel:+919568259784"
+                className="flex items-center gap-2 text-sm font-md text-[#17202A] transition-colors hover:text-[#D1842F]"
+              >
                 <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#1FA463]/10 text-[#1FA463]">
                   <Phone className="h-4 w-4" />
                 </div>
-                +91-9654900525
-              </div>
+                +91 95682 59784
+              </Link>
             </div>
           </div>
 
           {/* Image */}
-          <div className="relative h-[260px] w-full max-w-[400px] shrink-0 overflow-hidden rounded-2xl shadow-lg sm:h-[280px] lg:w-[480px] lg:max-w-none">
+          <div className="relative h-[280px] w-full max-w-[480px] shrink-0 overflow-hidden rounded-2xl shadow-lg sm:h-[320px] lg:w-[500px] lg:max-w-none">
             <img
               src={slide.image}
               alt={slide.title}
-              className="h-full w-full object-cover"
+              className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
             />
           </div>
         </div>

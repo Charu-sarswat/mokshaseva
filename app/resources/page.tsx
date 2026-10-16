@@ -24,7 +24,7 @@ export default function ResourcesPage() {
               Resources & Guides
             </span>
 
-            <h1 className="mt-1 max-w-4xl font-serif text-2xl font-md leading-[1] tracking-tight text-[#17202A] sm:text-3xl md:text-5xl">
+            <h1 className="mt-1 max-w-4xl font-sans text-2xl font-md leading-[1] tracking-tight text-[#17202A] sm:text-3xl md:text-5xl">
               Clear guidance for families, wherever they are.
             </h1>
 
@@ -88,7 +88,7 @@ export default function ResourcesPage() {
                 Knowledge Library
               </span>
 
-              <h2 className="mt-1 font-serif text-3xl font-md text-[#17202A] md:text-4xl">
+              <h2 className="mt-1 font-sans text-3xl font-md text-[#17202A] md:text-4xl">
                 Helpful resources
               </h2>
 
@@ -122,7 +122,7 @@ export default function ResourcesPage() {
             <div className="grid gap-5 md:grid-cols-[1fr_auto] md:items-center">
               <div>
 
-                <h3 className="font-serif text-2xl font-md text-[#17202A]">
+                <h3 className="font-sans text-2xl font-md text-[#17202A]">
                   Need personal guidance?
                 </h3>
 

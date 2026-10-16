@@ -52,8 +52,8 @@ export function HeroCarousel({ slides }: HeroCarouselProps) {
 
       <div className="relative mx-auto flex min-h-[500px] max-w-7xl items-center px-4 py-8 sm:px-6">
         <div className="max-w-2xl translate-y-8 [text-shadow:_0_1px_18px_rgba(255,255,255,0.72)]">
-          <h1 className="font-serif text-4xl font-md leading-tight text-[#17202A] sm:text-5xl">
-            {activeSlide.title} <span className="block text-[#C77B21]">{activeSlide.highlight}</span>
+          <h1 className="font-sans text-4xl font-md leading-[1.12] tracking-tight text-[#17202A] sm:text-5xl sm:leading-[1.12]">
+            {activeSlide.title} <span className="mt-0.5 block text-[#C77B21] sm:mt-1">{activeSlide.highlight}</span>
           </h1>
           <p className="mt-3 max-w-xl text-sm leading-7 text-[#17202A] sm:text-base">
             {activeSlide.description}

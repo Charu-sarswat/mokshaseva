@@ -37,7 +37,7 @@ export default async function ResourceArticlePage({ params }: PageProps) {
         return (
           <h3
             key={idx}
-            className="mb-3 mt-8 font-serif text-2xl font-md leading-tight text-[#17202A]"
+            className="mb-3 mt-8 font-sans text-2xl font-md leading-tight text-[#17202A]"
           >
             {block.replace("### ", "")}
           </h3>
@@ -101,7 +101,7 @@ export default async function ResourceArticlePage({ params }: PageProps) {
                   </span>
                 </div>
 
-                <h1 className="mt-1 max-w-4xl font-serif text-4xl font-md leading-[1.06] tracking-tight text-[#17202A] sm:text-5xl md:text-6xl">
+                <h1 className="mt-1 max-w-4xl font-sans text-4xl font-md leading-[1.06] tracking-tight text-[#17202A] sm:text-5xl md:text-6xl">
                   {resource.title}
                 </h1>
 
@@ -165,7 +165,7 @@ export default async function ResourceArticlePage({ params }: PageProps) {
                 <span className="text-xs font-md uppercase tracking-[0.16em] text-[#C77B21]">
                   Guide Details
                 </span>
-                <h2 className="mt-2 font-serif text-3xl font-md text-[#17202A]">
+                <h2 className="mt-2 font-sans text-3xl font-md text-[#17202A]">
                   What families should know
                 </h2>
               </div>
@@ -179,7 +179,7 @@ export default async function ResourceArticlePage({ params }: PageProps) {
                   <Headphones className="h-5 w-5" />
                 </div>
 
-                <h3 className="font-serif text-2xl font-md text-[#17202A]">
+                <h3 className="font-sans text-2xl font-md text-[#17202A]">
                   Need personal guidance?
                 </h3>
 
